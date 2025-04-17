@@ -32,8 +32,9 @@ app.use(
     resave: false,
     saveUninitialized: true,
     cookie: {
-      maxAge: 1000 * 60 * 60 * 24, 
+      maxAge: 1000 * 60 * 60 * 24,
       httpOnly: true,
+      secure: false,
     },
   })
 );
@@ -45,4 +46,4 @@ app.use(passport.session());
 
 // Declare routes
 
-export default app;
+export { app };
